@@ -1,0 +1,296 @@
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: #F1F1F1;
+	min-height: 100vh;
+	margin: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit; /* Gör att länken ärver samma färg som texten runt omkring */
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    width: 100%; /* Gör att menyn täcker hela bredden */
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: center;
+}
+ul li {
+  /*float: left;*/
+}
+
+ul li a {
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px 80px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+ul li a:hover {
+  background-color: #f9f9f9;
+}
+main {
+    width: 100%;
+    text-align: center; /* Detta centrerar allt innehåll (text, länkar, bilder) */
+    margin-top: 200px;   /* Ger lite luft under menyn */
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto; /* Centrerar bilden i förhållande till texten */
+}
+.image-row {
+	display: flex;
+	justify-content: center;
+    max-width: 100%;
+	gap : 20px; /* Lägger till mellanrum mellan bilderna */
+    padding-bottom: 20px;
+
+}
+.image-row img {
+    width: 100%;            /* Fyller upp länkens bredd */
+    height: 180px;          /* Sätt en fast höjd som passar din design */
+    object-fit: contain;    /* Gör att bilden behåller sina proportioner inuti boxen */
+    border: 3px solid #e6e6e6;
+    border-radius: 8px;
+    padding: 5px;          /* Ger lite luft inuti ramen så loggorna inte nuddar kanten */
+    margin: 0;
+    
+}
+
+/* För att se till att länkarna i raden tar upp lika mycket plats */
+.image-row a {
+    flex: 1;                /* Gör att alla 4 boxar blir exakt lika breda */
+    max-width: 200px;       /* Justera efter hur stora du vill ha dem */
+    display: block;
+}
+
+.image-row img:hover {
+    border-color: #d9d9d9; /* Ramen blir blå när man pekar på bilden */
+    cursor: pointer;       /* Muspekaren blir en hand */
+}
+.tilverk-image img {
+    width: 100%;            /* Fyller upp länkens bredd */
+    height: 100px;      
+    display: flex;   /* Sätt en fast höjd som passar din design */
+    object-fit: contain;    /* Gör att bilden behåller sina proportioner inuti boxen */
+    padding: 5px;          /* Ger lite luft inuti ramen så loggorna inte nuddar kanten */
+    margin: 0;
+    
+}
+
+/* För att se till att länkarna i raden tar upp lika mycket plats */
+.image-row {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    gap: 20px;
+    padding-bottom: 50px; /* Ändrad från 200px */
+}
+
+/* 2. Skapa rutnätet för ikonerna */
+.repair-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolumner */
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 120px;
+    padding-top: 300px;
+}
+
+.repair-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.repair-item img {
+    width: 80px; /* Justera storleken på ikonerna här */
+    height: auto;
+    margin-bottom: 10px;
+    /* Viktigt: Nollställ de globala marginalerna så de inte hamnar snett */
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+
+.repair-item p {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2;
+}
+.tabell {
+	display: block;
+    background-color: #d5d5d5; /* Den ljusgrå färgen */
+    max-width: 500px;          /* Boxens bredd */
+    margin: 50px auto;         /* Centrerar boxen horisontellt och ger luft uppåt */
+    padding: 40px;             /* Luft inuti boxen (mellan kanten och texten) */
+    border-radius: 25px;       /* Gör hörnen rejält runda som på bilden */
+    text-align: center;        /* Centrerar all text inuti */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03); /* Ett mycket svagt djup */
+	font-weight: bold;
+	font-size: 25px;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;          /* Ger snyggt avstånd mellan rullistorna */
+    margin: 40px auto;  /* AUTO centrerar hela behållaren horisontellt */
+    max-width: 400px;   /* Behåller bredden du valt */
+    width: 90%;         /* Gör den responsiv för mindre skärmar */
+}
+
+/* Styla själva select-rutorna så de ser ut som på bilden */
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #999;
+    font-size: 16px;
+    cursor: pointer;
+    appearance: none; /* Tar bort standard-pilen om man vill byta själv */
+
+}
+.button-calc {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+	max-width: 170px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #444;
+    transition: 0.2s;
+	margin:  auto;
+	display: block; /* Gör att knappen centrerar sig själv */
+}
+.pro-model {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    max-width: 170px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-weight: bold;   
+    cursor: pointer;
+    color: #444;
+    transition: 0.2s;
+    
+    /* ÄNDRING HÄR: */
+    margin: 5px auto 20px auto; /* 5px uppåt, auto sidor, 20px neråt */
+    
+    
+    display: block; 
+}
+.garanti-text {
+    align-items: center;
+
+    display:flex;
+    flex-direction: column;
+    margin: 200px auto 0 auto;
+    margin-top: 200px;
+    max-width: 700px;
+    font-size: 14px;
+    color: #666;
+}
+.main-footer {
+    background-color: #f9f9f9;
+    padding: 20px 10% 20px 10%;
+    font-family: sans-serif;
+    color: #333;
+    text-align: left; /* Viktigt: tar bort centreringen från main */
+    position: relative;
+}
+
+.footer-container {
+    display: grid;
+    /* Skapar 4 kolumner med olika bredd */
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr; 
+    gap: 30px;
+    align-items: start;
+}
+
+/* Stil för rubriker i footern */
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Listor i footern */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block; /* Återställ från din globala flex-meny */
+    background: transparent;
+    position: static;
+}
+
+.footer-column ul li {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+/* Kontakt-rader med ikoner */
+.footer-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.footer-row img.icon {
+    width: 18px;
+    height: auto;
+    margin: 0; /* Tar bort den globala marginalen */
+}
+
+.footer-row p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* DHL Loggan */
+.dhl-footer-logo {
+    width: 150px;
+    margin: -20px 0 0 0px; /* Justera så den hamnar under texten */
+}
+
+/* Staden-rutnätet (Våra butiker) */
+.city-grid {
+    display: flex;
+    gap: 20px;
+}
+
+/* Loggan längst ner till höger */
+.footer-bottom-logo {
+    display: flex;
+    justify-content: flex-end; /* Skickar innehållet till höger */
+    width: 100%;               /* Säkerställer att behållaren tar upp hela bredden */
+    margin-top: -80px;         /* Flyttar upp loggan */
+}
+
+/* Själva bilden inuti behållaren */
+.footer-bottom-logo img {
+    margin: 0 !important;      /* !important stoppar "margin: auto" från att centrera bilden */
+    width: 250px;              /* Justera storleken här */
+    height: auto;
+}
