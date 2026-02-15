@@ -40,39 +40,140 @@ ul li a:hover {
 }
 main {
     width: 100%;
-    text-align: center; /* Detta centrerar allt innehåll (text, länkar, bilder) */
-    margin-top: 200px;   /* Ger lite luft under menyn */
+    text-align: center; 
+    margin-top: 200px;  
 
 }
 
 img {
     max-width: 100%;
     height: auto;
-    margin: 20px auto; /* Centrerar bilden i förhållande till texten */
+    margin: 20px auto; 
 }
+
+
+
+
 .image-row {
 	display: flex;
 	justify-content: center;
     max-width: 100%;
-	gap : 20px; /* Lägger till mellanrum mellan bilderna */
+	gap : 20px; 
     padding-bottom: 20px;
 
 }
 .image-row img {
-    width: 100%;            /* Fyller upp länkens bredd */
-    height: 180px;          /* Sätt en fast höjd som passar din design */
-    object-fit: contain;    /* Gör att bilden behåller sina proportioner inuti boxen */
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
     border: 3px solid #e6e6e6;
     border-radius: 8px;
-    padding: 5px;          /* Ger lite luft inuti ramen så loggorna inte nuddar kanten */
+    padding: 5px;
     margin: 0;
     
 }
 
-/* För att se till att länkarna i raden tar upp lika mycket plats */
+/* Media Query för mobiler (skärmar under 768px) */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Gör så att iPhone-modellerna hamnar under varandra */
+    .image-row {
+        flex-direction: column; /* Ändrar från rad till kolumn */
+        align-items: center;    /* Centrerar mobilerna */
+        gap: 40px;              /* Ökar avståndet mellan mobilerna lite */
+    }
+
+    .model-item {
+        width: 80%;             /* Gör varje mobil-box lite bredare på mobilen */
+        max-width: 250px;
+    }
+
+    /* 2. Anpassa FAQ-boxen för mindre skärmar */
+    .FAQ {
+        width: 90%;             /* Gör FAQ-boxen bredare så den utnyttjar skärmen */
+        padding: 20px;          /* Minskar luft inuti boxen */
+        margin: 40px auto;      /* Mindre marginal ovanför */
+    }
+
+    .FAQ h1 {
+        font-size: 26px;        /* Gör FAQ-rubriken lite mindre */
+    }
+
+    .FAQ p {
+        font-size: 16px;        /* Lite mindre text för att undvika radbrytningar */
+    }
+
+    /* 3. Justera huvudmenyn (valfritt men rekommenderas) */
+    ul li a {
+        padding: 14px 20px;     /* Minskar de stora avstånden i menyn (du hade 80px) */
+        font-size: 12px;
+    }
+}
+
+
+.FAQ {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px auto 0 auto; /* Justerad marginal */
+    max-width: 700px;
+    font-size: 24px;
+    color: #141414;
+    margin-bottom: 100px;
+    margin-top: 0;
+}
+
+.FAQ h1 {
+    font-weight: bold;
+    font-size: 30; /* Lagt till px och gjort den större */
+    color: #141414;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.FAQ p::after {
+    content: ' ▶';
+    font-size: 12px;
+    color: #666;
+    vertical-align: middle;
+}
+.FAQ p:hover {
+    color: #000;
+    transform: scale(1.02); /* Lite förstoring när man pekar */
+}
+
+.video-section {
+    text-align: center;
+    margin: 60px auto;
+}
+
+.video-container {
+    /* Ändra detta värde (t.ex. 600px) för att göra den smalare */
+    max-width: 700px; 
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+    background-color: #000; /* Ger svarta kanter om videon inte fyller ut */
+}
+
+.video-container video {
+    width: 100%;    /* Fyller ut containern (som är max 700px) */
+    display: block;
+    height: auto;   /* Behåller videons proportioner */
+}
+
+
+
 .image-row a {
-    flex: 1;                /* Gör att alla 4 boxar blir exakt lika breda */
-    max-width: 200px;       /* Justera efter hur stora du vill ha dem */
+    flex: 1;
+    max-width: 200px;
     display: block;
 }
 
@@ -103,7 +204,7 @@ img {
 .repair-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 kolumner */
-    gap: 30px;
+    gap: 80px;
     max-width: 800px;
     margin: 0 auto;
     padding: 120px;
@@ -293,4 +394,48 @@ img {
     margin: 0 !important;      /* !important stoppar "margin: auto" från att centrera bilden */
     width: 250px;              /* Justera storleken här */
     height: auto;
+}
+.header-section {
+    margin-top: 100px; /* Ger plats under din fixerade meny */
+    text-align: center;
+}
+.header-section h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+
+.header-section h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px; /* Avstånd mellan stegen */
+    margin-bottom: 30px;
+}
+.step-item {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.step-item p {
+    font-size: 13px;
+    font-weight: bold;
+    color: #555;
+    margin: 0;
+}
+.divider {
+    border: 0;
+    border-top: 1px solid #ddd;
+    width: 60%;
+    margin: 20px auto 0 auto;
+}
+.repair-grid {
+    padding-top: 40px; /* Minskar det stora gapet du hade innan */
 }
