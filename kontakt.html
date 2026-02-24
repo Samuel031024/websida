@@ -10,48 +10,66 @@
 <body>
 	<div>
 		<ul>
- 			<li><a href="default.asp">OM OSS</a></li>
+ 			<li><a href="index.html">OM OSS</a></li>
 			<li><a href="kontakt.html">KONTAKT</a></li>
-			<li><a href="contact.asp">VILKOR</a></li>
+			<li><a href="index.html">VILKOR</a></li>
 	 		<li><a href="index.html">HEM</a></li>
 		</ul>
 	</div>
 	<main>
-        <h1>iPhone modeller</h1>
+<main>
+    <h1>Kontakta oss</h1>
     
-        <div class="image-row">
-            <div class="model-item">
-                <a href="tillverkare.html">
-                    <img src="Iphone/image 4.png" alt="Iphone 17">
-                </a>
-                <p>Iphone 17</p>
+    <div class="contact-container">
+        <div class="contact-info">
+            <div class="contact-item">
+                <img src="Iphone/location.png" alt="Adress ikon" class="icon">
+                <p><strong>Adress:</strong><br>Fixiphone, Kungsgatan 53, 903 26 Umeå</p>
             </div>
-    
-            <div class="model-item">
-                <a href="tillverkare.html">
-                    <img src="Iphone/image 5.png" alt="Iphone 16">
-                </a>
-                <p>Iphone 16</p>
+
+            <div class="contact-item">
+                <img src="Iphone/bi_phone.png" alt="Telefon ikon" class="icon">
+                <p><strong>Telefon:</strong><br>090-1234567</p>
             </div>
-    
-            <div class="model-item">
-                <a href="tillverkare.html">
-                    <img src="Iphone/image 7.png" alt="Iphone 15">
-                </a>
-                <p>Iphone 15</p>
+
+            <div class="contact-item">
+                <img src="Iphone/mail.png" alt="E-post ikon" class="icon">
+                <p><strong>E-post:</strong><br>info@fixiphone.se</p>
             </div>
-    
-            <div class="model-item">
-                <a href="tillverkare.html">
-                    <img src="Iphone/image 8.png" alt="Iphone 14">
-                </a>
-                <p>Iphone 14</p>
-            </div>
-    
         </div>
-    
-        <button class="pro-model" type="button">Pro modeller</button>
-    </main>
+
+        <div class="contact-form">
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Namn</label>
+                    <input type="text" id="name" name="name" placeholder="Ditt fullständiga namn" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-postadress</label>
+                    <input type="email" id="email" name="email" placeholder="Din e-postadress" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Ärende</label>
+                    <select id="subject" name="subject">
+                        <option value="reparation">Fråga om reparation</option>
+                        <option value="offert">Prisförfrågan/Offert</option>
+                        <option value="support">Teknisk support</option>
+                        <option value="annat">Övrigt</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Meddelande</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Skriv ditt meddelande här..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Skicka meddelande</button>
+            </form>
+        </div>
+    </div>
+</main>
 <footer class="main-footer">
     <div class="footer-container">
         
@@ -122,5 +140,3 @@
         <img src="Iphone/fix.png" alt="Fixiphone Logga">
     </div>
 </footer>
-<body
-
