@@ -6,7 +6,7 @@ body {
 }
 a {
     text-decoration: none;
-    color: inherit; /* Gör att länken ärver samma färg som texten runt omkring */
+    color: inherit; 
 }
 
 ul {
@@ -15,7 +15,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #ffffff;
-    width: 100%; /* Gör att menyn täcker hela bredden */
+    width: 100%; 
 	position: fixed;
 	top: 0;
 	display: flex;
@@ -43,7 +43,7 @@ main {
 }
 
 .image-row a img {
-    height: 120px !important; /* Här ändrar du storleken */
+    height: 120px !important; 
     width: auto !important;   
     object-fit: contain;
     border: 3px solid #e6e6e6;
@@ -52,48 +52,43 @@ main {
     margin: 0;
 }
 
-/* Denna styr själva behållaren för loggorna */
 .image-row {
     display: flex;
     justify-content: center;
     max-width: 100%;
     gap: 14px;
-    padding-bottom: 30px; /* Lagom avstånd neråt */
+    padding-bottom: 30px; 
 }
 
-/* Media Query för mobiler (skärmar under 768px) */
 @media screen and (max-width: 768px) {
     
-    /* 1. Gör så att iPhone-modellerna hamnar under varandra */
     .image-row {
-        flex-direction: column; /* Ändrar från rad till kolumn */
-        align-items: center;    /* Centrerar mobilerna */
-        gap: 40px;              /* Ökar avståndet mellan mobilerna lite */
+        flex-direction: column;
+        align-items: center;  
+        gap: 40px;           
     }
 
     .model-item {
-        width: 80%;             /* Gör varje mobil-box lite bredare på mobilen */
+        width: 80%;           
         max-width: 250px;
     }
 
-    /* 2. Anpassa FAQ-boxen för mindre skärmar */
     .FAQ {
-        width: 90%;             /* Gör FAQ-boxen bredare så den utnyttjar skärmen */
-        padding: 20px;          /* Minskar luft inuti boxen */
-        margin: 40px auto;      /* Mindre marginal ovanför */
+        width: 90%;       
+        padding: 20px;  
+        margin: 40px auto; 
     }
 
     .FAQ h1 {
-        font-size: 26px;        /* Gör FAQ-rubriken lite mindre */
+        font-size: 26px; 
     }
 
     .FAQ p {
-        font-size: 16px;        /* Lite mindre text för att undvika radbrytningar */
+        font-size: 16px;  
     }
 
-    /* 3. Justera huvudmenyn (valfritt men rekommenderas) */
     ul li a {
-        padding: 14px 20px;     /* Minskar de stora avstånden i menyn (du hade 80px) */
+        padding: 14px 20px; 
         font-size: 12px;
     }
 }
@@ -109,7 +104,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 100px auto 0 auto; /* Justerad marginal */
+    margin: 100px auto 0 auto;
     max-width: 700px;
     font-size: 24px;
     color: #141414;
@@ -119,7 +114,7 @@ main {
 
 .FAQ h1 {
     font-weight: bold;
-    font-size: 30; /* Lagt till px och gjort den större */
+    font-size: 30;
     color: #141414;
     margin-bottom: 50px;
     text-align: center;
@@ -132,7 +127,7 @@ main {
 }
 .FAQ p:hover {
     color: #000;
-    transform: scale(1.02); /* Lite förstoring när man pekar */
+    transform: scale(1.02);
 }
 
 .video-section {
@@ -141,46 +136,43 @@ main {
 }
 
 .video-container {
-    /* Ändra detta värde (t.ex. 600px) för att göra den smalare */
     max-width: 700px; 
     margin: 0 auto;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     border: 1px solid #ddd;
-    background-color: #000; /* Ger svarta kanter om videon inte fyller ut */
+    background-color: #000; 
 }
 
 .video-container video {
-    width: 100%;    /* Fyller ut containern (som är max 700px) */
+    width: 100%; 
     display: block;
-    height: auto;   /* Behåller videons proportioner */
+    height: auto; 
 }
 
 
 
 
 .image-row img:hover {
-    border-color: #d9d9d9; /* Ramen blir blå när man pekar på bilden */
-    cursor: pointer;       /* Muspekaren blir en hand */
+    border-color: #d9d9d9; 
+    cursor: pointer;
 }
 .tilverk-image img {
-    width: 100%;            /* Fyller upp länkens bredd */
+    width: 100%;    
     height: 100px;      
-    display: flex;   /* Sätt en fast höjd som passar din design */
-    object-fit: contain;    /* Gör att bilden behåller sina proportioner inuti boxen */
-    padding: 5px;          /* Ger lite luft inuti ramen så loggorna inte nuddar kanten */
+    display: flex;  
+    object-fit: contain;  
+    padding: 5px;      
     margin: 0;
     
 }
 
-/* För att se till att länkarna i raden tar upp lika mycket plats */
 
 
-/* 2. Skapa rutnätet för ikonerna */
 .repair-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 kolumner */
+    grid-template-columns: repeat(3, 1fr);
     gap: 80px;
     max-width: 800px;
     margin: 0 auto;
@@ -196,10 +188,9 @@ main {
 }
 
 .repair-item img {
-    width: 80px; /* Justera storleken på ikonerna här */
+    width: 80px;
     height: auto;
     margin-bottom: 10px;
-    /* Viktigt: Nollställ de globala marginalerna så de inte hamnar snett */
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
@@ -213,26 +204,26 @@ main {
 }
 .tabell {
 	display: block;
-    background-color: #d5d5d5; /* Den ljusgrå färgen */
-    max-width: 500px;          /* Boxens bredd */
-    margin: 50px auto;         /* Centrerar boxen horisontellt och ger luft uppåt */
-    padding: 40px;             /* Luft inuti boxen (mellan kanten och texten) */
-    border-radius: 25px;       /* Gör hörnen rejält runda som på bilden */
-    text-align: center;        /* Centrerar all text inuti */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.03); /* Ett mycket svagt djup */
+    background-color: #d5d5d5;
+    max-width: 500px;     
+    margin: 50px auto;   
+    padding: 40px;          
+    border-radius: 25px; 
+    text-align: center;    
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03); 
 	font-weight: bold;
 	font-size: 25px;
 }
 .input-group {
     display: flex;
     flex-direction: column;
-    gap: 15px;          /* Ger snyggt avstånd mellan rullistorna */
-    margin: 40px auto;  /* AUTO centrerar hela behållaren horisontellt */
-    max-width: 400px;   /* Behåller bredden du valt */
-    width: 90%;         /* Gör den responsiv för mindre skärmar */
+    gap: 15px;   
+    margin: 40px auto; 
+    max-width: 400px;  
+    width: 90%;         
 }
 
-/* Styla själva select-rutorna så de ser ut som på bilden */
+
 .input-group select {
     width: 100%;
     padding: 12px;
@@ -242,7 +233,7 @@ main {
     color: #999;
     font-size: 16px;
     cursor: pointer;
-    appearance: none; /* Tar bort standard-pilen om man vill byta själv */
+    appearance: none; 
 
 }
 .button-calc {
@@ -256,7 +247,7 @@ main {
     color: #444;
     transition: 0.2s;
 	margin:  auto;
-	display: block; /* Gör att knappen centrerar sig själv */
+	display: block;
 }
 .pro-model {
     background-color: #ffffff;
@@ -269,8 +260,8 @@ main {
     color: #444;
     transition: 0.2s;
     
-    /* ÄNDRING HÄR: */
-    margin: 5px auto 20px auto; /* 5px uppåt, auto sidor, 20px neråt */
+
+    margin: 5px auto 20px auto; 
     
     
     display: block; 
@@ -286,24 +277,22 @@ main {
     font-size: 14px;
     color: #666;
 }
-/* Grundinställningar för footern */
 .main-footer {
     background-color: #f9f9f9;
-    padding: 60px 10% 40px 10%; /* Mer luft uppåt för att matcha bilden */
+    padding: 60px 10% 40px 10%; 
     font-family: 'Segoe UI', Tahoma, sans-serif;
     color: #333;
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-between; /* Sprider ut kolumnerna jämnt */
+    justify-content: space-between; 
     align-items: flex-start;
     gap: 20px;
 }
 
-/* Kolumnerna */
 .footer-column {
-    flex: 1; /* Gör att alla kolumner tar lika mycket plats */
+    flex: 1;
 }
 
 .footer-column h3 {
@@ -313,7 +302,6 @@ main {
     font-weight: bold;
 }
 
-/* Tabellerna inuti footern */
 .footer-table {
     border-collapse: collapse;
     width: 100%;
@@ -327,7 +315,6 @@ main {
     text-align: left;
 }
 
-/* Kontakt-rader med ikoner */
 .footer-row {
     display: flex;
     align-items: flex-start;
@@ -339,7 +326,7 @@ main {
 .footer-row img.icon {
     width: 18px;
     height: auto;
-    margin: 0 !important; /* Säkerställ att inga globala marginaler stör */
+    margin: 0 !important; 
 }
 
 .footer-row p {
@@ -348,7 +335,6 @@ main {
     line-height: 1.4;
 }
 
-/* DHL Loggan till vänster */
 .dhl-footer-logo {
     width: 150px;
     height: auto;
@@ -356,19 +342,17 @@ main {
     display: block;
 }
 
-/* Den stora Fixiphone-loggan nere till höger */
 .footer-bottom-logo {
     display: flex;
     justify-content: flex-end;
-    margin-top: -30px; /* Drar upp den så den ligger i linje med DHL */
+    margin-top: -30px; 
 }
 
 .footer-bottom-logo img {
-    width: 280px; /* Justera storlek efter behov */
+    width: 280px; 
     height: auto;
 }
 
-/* Nollställ eventuella globala UL-regler som kan störa */
 .main-footer ul {
     display: block;
     position: static;
@@ -377,27 +361,25 @@ main {
     margin: 0;
 }
 
-/* 6. Se till att DHL-loggan hamnar rätt */
 .dhl-footer-logo {
     display: block;
     margin-top: 10px !important;
     width: 120px;
 }
 
-/* Stil för rubriker i footern */
+
 .city-table {
     width: 100%;
-    border-collapse: collapse; /* Tar bort dubbla linjer/mellanrum */
+    border-collapse: collapse;
     margin-top: 5px;
 }
 
 .city-table td {
-    vertical-align: top;       /* Justerar texten till toppen av cellen */
-    width: 50%;                /* Gör de två kolumnerna exakt lika breda */
-    padding: 0;                /* Nollställer inre marginaler */
+    vertical-align: top;  
+    width: 50%;     
+    padding: 0;             
 }
 
-/* Säkerställ att listorna i tabellen inte har punkter eller indrag */
 .city-table ul {
     list-style: none;
     padding: 0;
@@ -409,7 +391,6 @@ main {
     margin-bottom: 5px;
     color: #444;
 }
-/* Kontakt-rader med ikoner */
 .footer-row {
     display: flex;
     align-items: flex-start;
@@ -420,7 +401,7 @@ main {
 .footer-row img.icon {
     width: 18px;
     height: auto;
-    margin: 0; /* Tar bort den globala marginalen */
+    margin: 0; 
 }
 
 .footer-row p {
@@ -429,34 +410,31 @@ main {
     line-height: 1.4;
 }
 
-/* DHL Loggan */
 .dhl-footer-logo {
     width: 150px;
-    margin: -20px 0 0 0px; /* Justera så den hamnar under texten */
+    margin: -20px 0 0 0px;
 }
 
-/* Staden-rutnätet (Våra butiker) */
 .city-grid {
     display: flex;
     gap: 20px;
 }
 
-/* Loggan längst ner till höger */
 .footer-bottom-logo {
     display: flex;
-    justify-content: flex-end; /* Skickar innehållet till höger */
-    width: 100%;               /* Säkerställer att behållaren tar upp hela bredden */
-    margin-top: -80px;         /* Flyttar upp loggan */
+    justify-content: flex-end; 
+    width: 100%;       
+    margin-top: -80px;
 }
 
 /* Själva bilden inuti behållaren */
 .footer-bottom-logo img {
-    margin: 0 !important;      /* !important stoppar "margin: auto" från att centrera bilden */
-    width: 250px;              /* Justera storleken här */
+    margin: 0 !important;
+    width: 250px;
     height: auto;
 }
 .header-section {
-    margin-top: 100px; /* Ger plats under din fixerade meny */
+    margin-top: 100px;
     text-align: center;
 }
 .header-section h1 {
@@ -475,7 +453,7 @@ main {
 .steps-container {
     display: flex;
     justify-content: center;
-    gap: 80px; /* Avstånd mellan stegen */
+    gap: 80px; 
     margin-bottom: 30px;
 }
 .step-item {
@@ -497,10 +475,10 @@ main {
     margin: 20px auto 0 auto;
 }
 .repair-grid {
-    padding-top: 40px; /* Minskar det stora gapet du hade innan */
+    padding-top: 40px; 
 }
 
-/* Container för både info och formulär */
+
 .contact-container {
     display: flex;
     justify-content: space-between;
@@ -510,7 +488,7 @@ main {
     padding: 0 20px;
 }
 
-/* Kontaktinfo-styling */
+
 .contact-info {
     flex: 1;
 }
@@ -557,12 +535,12 @@ main {
     border: 1px solid #ddd;
     border-radius: 8px;
     font-size: 16px;
-    box-sizing: border-box; /* Viktigt så padding inte gör fälten bredare än 100% */
+    box-sizing: border-box;
 }
 
-/* Knapp-styling */
+
 .submit-btn {
-    background-color: #007bff; /* Byt till er profilfärg */
+    background-color: #007bff;
     color: white;
     padding: 12px 25px;
     border: none;
@@ -577,9 +555,51 @@ main {
     background-color: #0056b3;
 }
 
-/* Mobilanpassning */
-@media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
+@media print {
+    body {
+
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        background-color: #F1F1F1;
+    }
+
+    ul {
+        position: relative; 
+        top: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding: 20px 0;
+        background-color: #ffffff;
+    }
+
+    ul li {
+        display: inline-block;
+    }
+
+    ul li a {
+        padding: 10px 20px !important; 
+        white-space: nowrap;
+    }
+
+    main {
+        margin-top: 40px !important;
+    }
+
+    .tabell {
+        background-color: #d5d5d5;
+        -webkit-print-color-adjust: exact !important;
+    }
+
+    .image-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .button-calc {
+        display: none;
     }
 }
