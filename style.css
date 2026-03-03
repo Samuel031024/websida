@@ -177,7 +177,7 @@ main {
     max-width: 800px;
     margin: 0 auto;
     padding: 120px;
-    padding-top: 300px;
+    padding-top: 100px;
 }
 
 .repair-item {
@@ -415,10 +415,6 @@ main {
     margin: -20px 0 0 0px;
 }
 
-.city-grid {
-    display: flex;
-    gap: 20px;
-}
 
 .footer-bottom-logo {
     display: flex;
@@ -473,9 +469,6 @@ main {
     border-top: 1px solid #ddd;
     width: 60%;
     margin: 20px auto 0 auto;
-}
-.repair-grid {
-    padding-top: 40px; 
 }
 
 
