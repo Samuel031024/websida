@@ -59,41 +59,6 @@ main {
     gap: 14px;
     padding-bottom: 30px; 
 }
-
-@media screen and (max-width: 768px) {
-    
-    .image-row {
-        flex-direction: column;
-        align-items: center;  
-        gap: 40px;           
-    }
-
-    .model-item {
-        width: 80%;           
-        max-width: 250px;
-    }
-
-    .FAQ {
-        width: 90%;       
-        padding: 20px;  
-        margin: 40px auto; 
-    }
-
-    .FAQ h1 {
-        font-size: 26px; 
-    }
-
-    .FAQ p {
-        font-size: 16px;  
-    }
-
-    ul li a {
-        padding: 14px 20px; 
-        font-size: 12px;
-    }
-}
-
-
 .FAQ {
     background-color: #f1f1f1;
     border: 1px solid #ddd;
@@ -499,7 +464,6 @@ main {
     height: auto;
 }
 
-/* Formulär-styling */
 .contact-form {
     flex: 1.5;
     background: #ffffff;
@@ -532,7 +496,7 @@ main {
 }
 
 
-.submit-btn {
+.submit-buttonn {
     background-color: #007bff;
     color: white;
     padding: 12px 25px;
@@ -544,7 +508,7 @@ main {
     width: 100%;
 }
 
-.submit-btn:hover {
+.submit-buttonn:hover {
     background-color: #0056b3;
 }
 
@@ -594,5 +558,37 @@ main {
 
     .button-calc {
         display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    
+    .image-row {
+        flex-direction: column;
+        align-items: center;  
+        gap: 40px;           
+    }
+
+    .model-item {
+        width: 80%;           
+        max-width: 250px;
+    }
+
+    .FAQ {
+        width: 90%;       
+        padding: 20px;  
+        margin: 40px auto; 
+    }
+
+    .FAQ h1 {
+        font-size: 26px; 
+    }
+
+    .FAQ p {
+        font-size: 16px;  
+    }
+
+    ul li a {
+        padding: 14px 20px; 
+        font-size: 12px;
     }
 }
