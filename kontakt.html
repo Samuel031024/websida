@@ -18,7 +18,9 @@
 	</div>
 <main>
     <h1>Kontakta oss</h1>
-    
+    <button id="toggle-info-btn" style="margin-bottom: 20px; padding: 10px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
+    Visa/Dölj Kontaktuppgifter
+</button>
     <div class="contact-container">
         <div class="contact-info">
             <div class="contact-item">
@@ -41,12 +43,12 @@
             <form action="#" method="post">
                 <div class="form-group">
                     <label for="name">Namn</label>
-                    <input type="text" id="name" name="name" placeholder="Ditt fullständiga namn" required>
+                    <input type="text" id="name" name="name" placeholder="Ditt fullständiga namn" required onfocus="focusField(this)" onblur="blurField(this)">
                 </div>
 
                 <div class="form-group">
                     <label for="email">E-postadress</label>
-                    <input type="email" id="email" name="email" placeholder="Din e-postadress" required>
+                    <input type="email" id="email" name="email" placeholder="Din e-postadress" required onfocus="focusField(this)" onblur="blurField(this)">
                 </div>
 
                 <div class="form-group">
@@ -61,7 +63,7 @@
 
                 <div class="form-group">
                     <label for="message">Meddelande</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Skriv ditt meddelande här..." required></textarea>
+                    <textarea id="message" name="message" rows="5" placeholder="Skriv ditt meddelande här..." required onfocus="focusField(this)" onblur="blurField(this)"></textarea>
                 </div>
 
                 <button type="submit" class="submit-buttonn">Skicka meddelande</button>
@@ -139,3 +141,8 @@
         <img src="Iphone/fix.png" alt="Fixiphone Logga">
     </div>
 </footer>
+<script src="dom-interactions.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="effects.js"></script>
+</body>
+</html>

@@ -9,14 +9,15 @@
 <body>
     <nav>
         <ul>
-            <li><a href="default.asp">OM OSS</a></li>
-            <li><a href="kontakt.html">KONTAKT</a></li>
-            <li><a href="contact.asp">VILKOR</a></li>
-            <li><a href="index.html">HEM</a></li>
+            <li><a href="default.asp" onmouseover="highlightNav(this)" onmouseout="resetNav(this)">OM OSS</a></li>
+            <li><a href="kontakt.html" onmouseover="highlightNav(this)" onmouseout="resetNav(this)">KONTAKT</a></li>
+            <li><a href="contact.asp" onmouseover="highlightNav(this)" onmouseout="resetNav(this)">VILKOR</a></li>
+            <li><a href="index.html" onmouseover="highlightNav(this)" onmouseout="resetNav(this)">HEM</a></li>
         </ul>
     </nav>
 
     <main>
+        <button onclick="showMessage()">Klicka här</button>
         <h1>Välj tillverkare</h1>
         
         <div class="image-row">
@@ -158,5 +159,7 @@
 </footer>
     </main>
     <script src="randomizer.js"></script>
+    <script src="dom-interactions.js"></script>
+    <script src="hello.js"></script>
 </body> 
 </html>
